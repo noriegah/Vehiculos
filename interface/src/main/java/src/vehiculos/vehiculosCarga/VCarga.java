@@ -6,6 +6,8 @@ import src.vehiculos.vehiculosCarrera.VCarrera;
 
 public class VCarga extends Vehiculo implements ComportamientoVCarga{
 
+    
+    
 
     public void definir(Vehiculo vehiculo) {
         if(vehiculo instanceof VCarga){
