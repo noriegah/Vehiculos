@@ -16,29 +16,29 @@ public class Camioneta extends Vehiculo implements ComportamientoCamioneta{
 
     public void definir(Vehiculo vehiculo) {
         if(vehiculo instanceof VCarga){
-            System.out.println("Es un vehículo de Carga, puede cargar mercaderia pesada ");
+            System.out.println("VEHICULO DE CARGA PESADA");
         }
         else if(vehiculo instanceof VCarrera){
-            System.out.println("Es un vehículo de Carrera, puede aumentar hasta 3 veces más su aceleracion base ");
+            System.out.println("VEHICULO DE CARRERA, AUMENTA SU ACELERACIÓN");
         }
         else if(vehiculo instanceof Camioneta){
-            System.out.println("Es una camioneta, carga muchas personas ");
+            System.out.println("CAMIONETA, CARGA GENTE");
         }
         else {
-            System.out.println("Objeto no reconocido");
+            System.out.println("NO SE RECONOCE");
         }
     }
 
     public void girarDerecha() {
-        System.out.println("\nEl vehículo giró a la derecha\n");
+        System.out.println("\nEL VEHICULO GIRO A LA DERECHA\n");
     }
 
     public void girarIzquierda() {
-        System.out.println("\nEl vehículo giró a la izquierda\n");
+        System.out.println("\nEL VEHICULO GIRO A LA IZQUIERDA\n");
     }
 
     public void transportarPersonas() {
-        System.out.println("\nLas camionetas transportan hasta 50 personas \n");
+        System.out.println("\nCAMIONETA CON CAPACIDAD DE 50 PERSONAS \n");
         this.cantidadPasajeros = 50;
     }
     
