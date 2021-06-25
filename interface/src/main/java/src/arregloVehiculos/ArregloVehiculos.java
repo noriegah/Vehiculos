@@ -17,12 +17,11 @@ public class ArregloVehiculos {
         int opcion; 
         llenarArreglo();
         do{
-            System.out.println("MENU_______________________");
+            System.out.println("-------------MENU-------------");
             System.out.println("");
-            System.out.println("1) Ver y escoger un vehiculo");
-            System.out.println("2) salir");
-            System.out.println("");
-            opcion = IngresoDatos.getInt("Escoger opcion");
+            System.out.println("1) ESCOGER VEICULO");
+            System.out.println("2) SALIR");
+            opcion = IngresoDatos.getInt("Por favor digite una opcion");
 
             if(opcion == 1){
                 escogerArreglo();
@@ -36,17 +35,17 @@ public class ArregloVehiculos {
         int escoger2;
         do{
             mostrarArreglo();
-            escoger = IngresoDatos.getInt("\nEscoger el vehiculo que desea ver ");
+            escoger = IngresoDatos.getInt("\nEscoja el vehiculo que desea ver ");
             if(escoger <= 20){
                 for (int i = 0; i < vehiculos.length; i++) {
                     if(i == (escoger - 1)){
                         do{
                             System.out.println("");
-                            System.out.println("1) Girar a la Derecha");
-                            System.out.println("2) Girar a la izquierda");
-                            System.out.println("3) Mostrar que tipo de vehiculo es");        
-                            System.out.println("4) Regresar al menu.");
-                            escoger2 = IngresoDatos.getInt("Escoger accion");
+                            System.out.println("1) GIRAR A LA DERECHA");
+                            System.out.println("2) GIRAR A LA IZQUIERDA");
+                            System.out.println("3) MOSTRAR TIPO DE VEHICULO");        
+                            System.out.println("4) REGRESAR AL MENU ");
+                            escoger2 = IngresoDatos.getInt("DIGITE UNA OPCION");
                             if(escoger2 == 1){
                                 vehiculos[i].girarDerecha();
                             }
@@ -64,7 +63,7 @@ public class ArregloVehiculos {
                 System.out.println("\n");
             }
             else{
-                System.out.println("No existe el vehiculo que quiere seleccionar\n");
+                System.out.println("NO EXIST EEL VEHICULO");
             }
         } while(escoger !=21);
         
@@ -76,13 +75,13 @@ public class ArregloVehiculos {
 
         while(cantidadVehiculos < 20){
             if(random == 1){
-                vehiculos[cantidadVehiculos] = new VCarga("gasolina", 10, 2, 90, 4.5);
+                vehiculos[cantidadVehiculos] = new VCarga("GAS", 10, 2, 90, 4.5);
             }
             else if(random == 2){
-                vehiculos[cantidadVehiculos] = new VCarrera("diesel", 9, 2, 335, 11.6);
+                vehiculos[cantidadVehiculos] = new VCarrera("DIESEL", 9, 2, 335, 11.6);
             }
             else if(random == 3){
-                vehiculos[cantidadVehiculos] = new Camioneta("diesel", 12, 2, 80, 3.25);
+                vehiculos[cantidadVehiculos] = new Camioneta("DIESEL", 12, 2, 80, 3.25);
             }
             random = generarNumeroRandom(1, 3);
             cantidadVehiculos++;
@@ -94,7 +93,7 @@ public class ArregloVehiculos {
         for (int i = 0; i < vehiculos.length; i++) {
             System.out.println((i+1) + ")\t" + vehiculos[i].toString());
         }
-        System.out.println("21)\tRegresar al Menú");
+        System.out.println("21)\tREGRESAR MENU ");
     }
 
     public int generarNumeroRandom(int minimo, int maximo){
